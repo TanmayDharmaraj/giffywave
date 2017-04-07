@@ -1,0 +1,23 @@
+{
+  "name": "giffywave",
+  "version": "1.0.0",
+  "description": "Play gifs from your microwave",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanmaydharmaraj/giffywave.git"
+  },
+  "author": "Tanmay Dharmaraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanmaydharmaraj/giffywave/issues"
+  },
+  "homepage": "https://github.com/tanmaydharmaraj/giffywave#readme",
+  "dependencies": {
+    "clarifai": "^2.1.5"
+  }
+}
