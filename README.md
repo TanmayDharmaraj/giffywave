@@ -12,4 +12,4 @@ From the terminal navigate inside the directory and run
 1. `npm install`
 2. `npm start`
 
-You should see the a json output on your screen.
+You should see a json output on your screen containing URL of the GIF.
