@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tanmaydharmaraj/giffywave#readme",
   "dependencies": {
-    "clarifai": "^2.1.5"
+    "clarifai": "^2.1.5",
+    "node-base64-image": "^1.0.3"
   }
 }

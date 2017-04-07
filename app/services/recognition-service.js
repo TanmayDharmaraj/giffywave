@@ -4,8 +4,10 @@ module.exports = function(secrets, Clarifai) {
         secrets.Clarify_Client_Secret
     );
 
-    function PredictFoodItems(callback) {
-        app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-north.jpg').then(
+    function PredictFoodItems(base64Image, callback) {
+        app.models.predict(Clarifai.FOOD_MODEL, {
+            base64: base64Image
+        }).then(
             function(response) {
                 var result = [];
                 var err = null;

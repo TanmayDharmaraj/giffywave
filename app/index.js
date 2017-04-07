@@ -2,15 +2,22 @@
 const secrets = require('./secrets');
 const clarify = require('./services/recognition-service');
 const giffy = require('./services/gif-service');
+const image = require('./services/image-helper');
 
-clarify.PredictFoodItems(function(err, resp) {
-    if (err) {
-        console.error(err);
-        return;
+image.EncodeImage("./app/images/food-004.jpg", function(err, base64EncodedImage) {
+    if(err){
+      console.error(err);
+      return;
     }
-    var tag = resp[0];
-    console.log("Getting gif for " + tag);
-    giffy.GetRandomGif(resp[0], function(err, gif) {
-      console.log(gif);
+    clarify.PredictFoodItems(base64EncodedImage, function(err, resp) {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        var tag = resp[0];
+        console.log("Getting gif for " + tag);
+        giffy.GetRandomGif(resp[0], function(err, gif) {
+            console.log(gif);
+        });
     });
 });
